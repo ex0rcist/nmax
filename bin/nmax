@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'nmax'
+
+if ARGV.length != 1 || ARGV[0] !~ /\A\d+\z/ || ARGV[0].to_i < 1
+  puts 'Usage: cat file.txt | nmax N'
+  exit
+end
+
+io = Nmax::IO.new($stdin, 1024 * 4) # 4kb chunk
+counter = Nmax::Counter.new(io, ARGV.first.to_i)
+
+puts counter.numbers
