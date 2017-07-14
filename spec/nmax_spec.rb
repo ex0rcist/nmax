@@ -23,11 +23,11 @@ RSpec.describe Nmax do
 
   context 'args check' do
     it 'raises message if n is not numeric or less than 1' do
-      expect(`echo 'abc123 hello world 45.6 99problems 10s' | ./bin/nmax 0`).to eq("Usage: cat file.txt | nmax N\n")
+      expect(`echo 'abc123 hello world 45.6 99problems 10s' | nmax 0`).to eq("Usage: cat file.txt | nmax N\n")
     end
 
     it 'raises message if n is not numeric or less than 1' do
-      expect(`echo 'abc123 hello world 45.6 99problems 10s' | ./bin/nmax abs1`).to eq("Usage: cat file.txt | nmax N\n")
+      expect(`echo 'abc123 hello world 45.6 99problems 10s' | nmax abs1`).to eq("Usage: cat file.txt | nmax N\n")
     end
   end
 end
