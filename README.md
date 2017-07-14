@@ -1,4 +1,5 @@
 # Nmax
+[![Build Status](https://travis-ci.org/ex0rcist/nmax.svg?branch=master)](https://travis-ci.org/ex0rcist/nmax)
 
 Установка:
 
